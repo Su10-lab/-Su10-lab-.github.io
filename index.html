@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hi, I'm Shaswat Upadhyay — a Class of 2027 student exploring biology, physics, medicine, and healthcare technology.">
+    <meta name="description" content="Meet Shaswat Upadhyay — a Class of 2027 student exploring biology, physics, medicine, and healthcare technology.">
     <meta name="theme-color" content="#0b1021">
     <!-- Evergreen #5: Open Graph Social Preview & Inline SVG Favicon -->
     <meta property="og:title" content="Shaswat Upadhyay | Student Notebook (Class of 2027)">
-    <meta property="og:description" content="Interactive biology & physics notebook, DIY microscope simulator, DNA game, and student portfolio.">
+    <meta property="og:description" content="Interactive biology and physics notebook, basic functional optical microscope simulator, DNA challenge, and student portfolio.">
     <meta property="og:type" content="website">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%230b1021'/%3E%3Ccircle cx='32' cy='32' r='29' fill='none' stroke='%237cc6fe' stroke-width='3'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%2352f2a8' font-family='monospace' font-weight='bold' font-size='26'%3ESU%3C/text%3E%3C/svg%3E">
     <title>Shaswat Upadhyay | Student Notebook (Class of 2027)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400&family=Outfit:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         /* ==========================================================================
            GPU-ACCELERATED CSS @PROPERTY COLOR ENGINE (ZERO LAG, SMOOTH MORPHING)
@@ -146,33 +146,39 @@
             --text: #f8fafc;
             --body: #cbd5e1;
             --muted: #94a3b8;
-            --display: 'Fraunces', Georgia, serif;
-            --sans: 'Outfit', system-ui, -apple-system, sans-serif;
-            --mono: 'Space Mono', monospace;
+            --display: 'Instrument Serif', Georgia, serif;
+            --sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            --mono: 'JetBrains Mono', monospace;
             --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
             --uv-x: -500px;
             --uv-y: -500px;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+        html { scroll-padding-top: 96px; }
         body {
             background-color: var(--bg);
             color: var(--text);
-            font: 400 16px/1.7 var(--sans);
+            font: 400 16px/1.75 var(--sans);
+            letter-spacing: -0.008em;
             overflow-x: hidden;
             transition:
-                --bg 0.48s ease,
-                --bg-2 0.48s ease,
-                --card 0.48s ease,
-                --card-solid 0.48s ease,
-                --border 0.48s ease,
-                --accent 0.48s ease,
-                --accent-2 0.48s ease,
-                background-color 0.48s ease;
+                --bg 0.38s ease,
+                --bg-2 0.38s ease,
+                --card 0.38s ease,
+                --card-solid 0.38s ease,
+                --border 0.38s ease,
+                --accent 0.38s ease,
+                --accent-2 0.38s ease,
+                background-color 0.38s ease;
             -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
-        /* Hardware-accelerated top glow layer (replaces laggy background-attachment:fixed) */
+        /* Pause heavy variable interpolations while fast-jumping via top navbar to eliminate scroll lag */
+        body.nav-scrolling,
+        body.nav-scrolling * {
+            transition: none !important;
+        }
         body::before {
             content: "";
             position: fixed;
@@ -238,10 +244,11 @@
             margin-bottom: 16px;
         }
         .portal-title {
-            font: 600 clamp(30px, 5vw, 44px)/1.12 var(--display);
+            font: 400 clamp(36px, 5.5vw, 50px)/1.08 var(--display);
+            letter-spacing: -0.015em;
             margin-bottom: 10px;
         }
-        .portal-title em { color: #ff9ebb; font-style: italic; font-weight: 400; }
+        .portal-title em { color: #ff9ebb; font-style: italic; }
         .portal-sub {
             font-size: 14.5px;
             color: #cbd5e1;
@@ -325,6 +332,7 @@
             gap: 10px;
             font-weight: 700;
             font-size: 15px;
+            letter-spacing: -0.02em;
             white-space: nowrap;
         }
         .brand-badge {
@@ -346,7 +354,7 @@
             padding: 6px 12px;
             border-radius: 999px;
             font-size: 13px;
-            font-weight: 500;
+            font-weight: 600;
             color: var(--muted);
             transition: color 0.2s, background-color 0.2s;
         }
@@ -354,7 +362,7 @@
         .nav-link.active {
             background: var(--accent);
             color: var(--accent-ink);
-            font-weight: 600;
+            font-weight: 700;
         }
         .nav-right {
             display: flex;
@@ -446,17 +454,16 @@
             margin-bottom: 8px;
         }
         .sec-title {
-            font: 600 clamp(32px, 4.5vw, 48px)/1.15 var(--display);
-            letter-spacing: -0.02em;
+            font: 400 clamp(38px, 5vw, 56px)/1.08 var(--display);
+            letter-spacing: -0.015em;
         }
         .sec-title em {
             color: var(--accent-2);
             font-style: italic;
-            font-weight: 400;
         }
         .sec-sub {
             color: var(--body);
-            font-size: 15px;
+            font-size: 15.5px;
             max-width: 540px;
             margin-top: 8px;
         }
@@ -548,7 +555,7 @@
             display: block;
         }
 
-        /* FIXED: Word-by-Word Irregular Real Marker Highlighter */
+        /* Word-by-Word Irregular Real Marker Highlighter */
         .hl-word {
             display: inline;
             padding: 0 1px;
@@ -561,7 +568,6 @@
         body.pen-active .hl-word:hover {
             background: rgba(255, 224, 102, 0.22);
         }
-        /* Irregular, organic hand-drawn marker stroke variations */
         .hl-word.marked {
             background: linear-gradient(104deg, rgba(255, 224, 102, 0) 0.9%, rgba(255, 224, 102, 0.92) 2.4%, rgba(255, 212, 59, 0.85) 96%, rgba(255, 224, 102, 0) 99%);
             color: #1a1605 !important;
@@ -582,7 +588,7 @@
             padding: 2px 4px 0 4px;
         }
 
-        /* FIXED: Working Optical Magnifying Loupe */
+        /* Working Optical Magnifying Loupe */
         #loupe-ring {
             position: fixed;
             left: var(--uv-x);
@@ -662,7 +668,8 @@
             margin-bottom: 14px;
         }
         .card-title {
-            font: 700 21px/1.3 var(--sans);
+            font: 700 20px/1.3 var(--sans);
+            letter-spacing: -0.02em;
             margin-bottom: 8px;
             color: var(--text);
         }
@@ -681,25 +688,24 @@
             border-radius: 999px;
             background: rgba(255,255,255,0.06);
             border: 1px solid var(--border);
-            font: 500 13px var(--sans);
+            font: 600 13px var(--sans);
             color: var(--accent);
             margin-bottom: 18px;
         }
         .hero-name {
-            font: 600 clamp(42px, 6vw, 72px)/1.06 var(--display);
-            letter-spacing: -0.02em;
+            font: 400 clamp(50px, 7vw, 84px)/1.02 var(--display);
+            letter-spacing: -0.015em;
             margin-bottom: 16px;
         }
         .hero-name span {
             color: var(--accent);
             font-style: italic;
-            font-weight: 400;
         }
         .type-box {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            font: 400 13px var(--mono);
+            font: 500 12.5px var(--mono);
             color: var(--accent-2);
             margin: 14px 0 20px;
             padding: 6px 12px;
@@ -710,12 +716,12 @@
             border-left: 3px solid var(--accent);
             padding-left: 14px;
             margin: 16px 0 18px;
-            font: italic 19px/1.4 var(--display);
+            font: italic 22px/1.35 var(--display);
             color: var(--text);
         }
         .motto-box small {
             display: block;
-            font: 400 10px var(--mono);
+            font: 500 10px var(--mono);
             color: var(--muted);
             text-transform: uppercase;
             letter-spacing: 0.1em;
@@ -759,7 +765,7 @@
             border-color: var(--accent);
         }
 
-        /* #7: Photo Frame with Interactive Anatomy / Bio-Scan X-Ray Overlay */
+        /* Clean Portrait Card */
         .photo-card {
             padding: 16px;
             display: flex;
@@ -781,7 +787,6 @@
             object-fit: cover;
             object-position: center 22%;
             display: block;
-            transition: filter 0.4s ease;
         }
         .photo-fallback {
             display: none;
@@ -796,83 +801,12 @@
             font: italic 68px var(--display);
             color: var(--accent);
         }
-        .bioscan-btn {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            z-index: 6;
-            padding: 5px 11px;
-            border-radius: 999px;
-            border: 1px solid rgba(82, 242, 168, 0.5);
-            background: rgba(7, 18, 36, 0.78);
-            backdrop-filter: blur(6px);
-            color: #52f2a8;
-            font: 700 10px var(--mono);
-            cursor: pointer;
-            transition: transform 0.25s var(--spring), background-color 0.2s;
-        }
-        .bioscan-btn:hover { transform: scale(1.06); }
-        .bioscan-btn[aria-pressed="true"] {
-            background: #52f2a8;
-            color: #052116;
-        }
-        .xray-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(6, 22, 30, 0.82);
-            background-image:
-                linear-gradient(to right, rgba(82, 242, 168, 0.08) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(82, 242, 168, 0.08) 1px, transparent 1px);
-            background-size: 20px 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 10px;
-            padding: 20px;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.35s ease;
-            z-index: 5;
-        }
-        .photo-frame.xray-on .xray-overlay {
-            opacity: 1;
-            pointer-events: auto;
-        }
-        .photo-frame.xray-on img {
-            filter: contrast(1.2) saturate(0.2) hue-rotate(140deg);
-        }
-        .xray-laser {
-            position: absolute;
-            left: 0; right: 0;
-            height: 2px;
-            background: #52f2a8;
-            box-shadow: 0 0 12px #52f2a8;
-            animation: scanSweep 2.6s ease-in-out infinite alternate;
-        }
-        @keyframes scanSweep {
-            from { top: 8%; }
-            to { top: 92%; }
-        }
-        .xray-stat {
-            background: rgba(0, 0, 0, 0.45);
-            border-left: 3px solid #52f2a8;
-            padding: 7px 10px;
-            border-radius: 6px;
-            font: 700 11px var(--mono);
-            color: #e2f8ee;
-        }
-        .xray-stat small {
-            display: block;
-            color: #52f2a8;
-            font-size: 9.5px;
-            text-transform: uppercase;
-        }
         .photo-tags {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-top: 12px;
-            font: 400 12px var(--mono);
+            font: 500 12px var(--mono);
             color: var(--muted);
         }
 
@@ -1113,7 +1047,7 @@
         }
 
         /* ==========================================================================
-           UPGRADED DIY CARDBOARD MICROSCOPE LAB
+           UPGRADED BASIC FUNCTIONAL OPTICAL MICROSCOPE LAB
            ========================================================================== */
         .microscope-lab {
             margin-top: 16px;
@@ -1384,19 +1318,19 @@
     <div class="portal-overlay" id="portal-overlay" role="dialog" aria-modal="true" aria-labelledby="portal-title">
         <div class="portal-card">
             <span class="portal-badge">SHASWAT UPADHYAY • CLASS OF 2027</span>
-            <h2 class="portal-title" id="portal-title">Every idea starts with <em>a spark.</em></h2>
-            <p class="portal-sub">Slide the neural spark across the synapse (or tap the button below) to open my notebook.</p>
+            <h2 class="portal-title" id="portal-title">Every discovery begins with <em>a spark.</em></h2>
+            <p class="portal-sub">Slide the neural impulse across the synapse, or select the button below, to open my portfolio notebook.</p>
 
             <div class="synapse-unlock-box">
                 <div class="synapse-nodes-row">
                     <span>⚡ NEURON A</span>
-                    <span id="portal-pct">Spark: 0%</span>
+                    <span id="portal-pct">Impulse: 0%</span>
                     <span>NEURON B 🧠</span>
                 </div>
-                <input type="range" min="0" max="100" value="0" class="portal-slider" id="portal-slider" aria-label="Slide to connect synapse and open portfolio">
+                <input type="range" min="0" max="100" value="0" class="portal-slider" id="portal-slider" aria-label="Slide to connect the synapse and open the portfolio">
             </div>
 
-            <button type="button" class="portal-skip-btn" id="portal-btn">⚡ Spark &amp; Open Notebook ↗</button>
+            <button type="button" class="portal-skip-btn" id="portal-btn">⚡ Ignite Spark &amp; Enter ↗</button>
         </div>
     </div>
 
@@ -1416,10 +1350,10 @@
                 <a href="#home" class="nav-link active" data-target-scene="0">Home</a>
                 <a href="#about" class="nav-link" data-target-scene="1">About</a>
                 <a href="#interests" class="nav-link" data-target-scene="2">Curiosity</a>
-                <a href="#academics" class="nav-link" data-target-scene="3">School</a>
-                <a href="#leadership" class="nav-link" data-target-scene="4">Prefect</a>
+                <a href="#academics" class="nav-link" data-target-scene="3">Academics</a>
+                <a href="#leadership" class="nav-link" data-target-scene="4">Leadership</a>
                 <a href="#achievements" class="nav-link" data-target-scene="5">Milestones</a>
-                <a href="#connect" class="nav-link" data-target-scene="6">Say Hi</a>
+                <a href="#connect" class="nav-link" data-target-scene="6">Connect</a>
             </nav>
 
             <div class="nav-right">
@@ -1437,47 +1371,40 @@
         <section id="home" class="section-block" data-scene="0">
             <div class="grid-12">
                 <div class="card taped span-7" style="display:flex;flex-direction:column;justify-content:center;">
-                    <button type="button" class="lab-sticky" data-front="📌 Sticky Note (Click)" data-back="💡 Fun fact: Human DNA uncoiled is ~2 meters long per cell!">📌 Sticky Note (Click)</button>
+                    <button type="button" class="lab-sticky" data-front="📌 Quick Note (Click)" data-back="💡 Did you know? Uncoiled human DNA stretches ~2 meters per cell!">📌 Quick Note (Click)</button>
                     <span class="uv-secret">🔬 UV SECRET: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + 38 ATP</span>
                     <div>
-                        <span class="hero-greeting" id="hero-greeting">👋 Hey! I’m a Class 12 Student (Batch of 2027)</span>
+                        <span class="hero-greeting" id="hero-greeting">👋 Hello! I am a Class 12 Student (Class of 2027)</span>
                         <h1 class="hero-name">Shaswat <span>Upadhyay.</span></h1>
                         <p class="card-desc" style="font-size:16.5px;">
-                            I’m a student who loves figuring out how living things work — from tiny strands of DNA to how our brain learns new stuff — and how simple tech can help people stay healthy.
+                            I am a senior secondary student deeply fascinated by the mechanisms of living systems — from molecular genetics to neural plasticity — and how modern technology can advance human healthcare.
                         </p>
                         <div class="type-box">
                             <span>↳</span>
-                            <span id="typewriter">Loving Biology &amp; Physics</span>
+                            <span id="typewriter">Exploring Biology &amp; Physics</span>
                         </div>
                         <blockquote class="motto-box">
-                            <small>A quote I live by</small>
+                            <small>Guiding Philosophy</small>
                             “Self-doubt kills the inner self of one.”
                         </blockquote>
                         <!-- Evergreen #3: Daily Rotating Science Fact -->
                         <div class="daily-fact-pill">
-                            <b>🧬 DAILY SPARK:</b>
-                            <span id="daily-fact-text">Your body produces about 2 million new red blood cells every single second!</span>
+                            <b>🧬 DAILY INSIGHT:</b>
+                            <span id="daily-fact-text">The human body produces approximately two million new red blood cells every single second.</span>
                         </div>
                         <div class="btn-row">
-                            <a href="#interests" class="btn btn-primary">Try the Interactive Science Cards ↓</a>
+                            <a href="#interests" class="btn btn-primary">Explore Interactive Science Labs ↓</a>
                             <a href="https://www.linkedin.com/in/shaswat-upadhyay-0b8280444" target="_blank" rel="noopener noreferrer" class="btn">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                                <span>My LinkedIn</span>
+                                <span>LinkedIn Profile</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- #7: Portrait Card with Interactive Bio-Scan / X-Ray Overlay -->
+                <!-- Clean Portrait Card -->
                 <div class="card span-5 photo-card">
                     <div class="photo-frame" id="photo-frame">
-                        <button type="button" class="bioscan-btn" id="bioscan-btn" aria-pressed="false">🔬 Bio-Scan</button>
-                        <div class="xray-overlay" aria-hidden="true">
-                            <div class="xray-laser"></div>
-                            <div class="xray-stat"><small>CEREBRAL CORTEX FOCUS</small>70% Biology • 30% Physics &amp; Optics</div>
-                            <div class="xray-stat"><small>METABOLIC ENGINE</small>Powered by 3x Daily Chai Infusions ☕</div>
-                            <div class="xray-stat"><small>OPTIC NERVE TARGET</small>Healthcare Tech &amp; Life Sciences (May 2027)</div>
-                        </div>
                         <img src="profile.jpeg" alt="Shaswat Upadhyay" decoding="async" fetchpriority="high"
                              onerror="this.style.display='none';document.getElementById('photo-fallback').style.display='flex';">
                         <div id="photo-fallback" class="photo-fallback">
@@ -1502,40 +1429,40 @@
         <!-- 2. ABOUT ME -->
         <section id="about" class="section-block" data-scene="1">
             <div class="sec-head">
-                <span class="sec-tag">01 // A QUICK INTRO</span>
-                <h2 class="sec-title">A bit about <em>me.</em></h2>
+                <span class="sec-tag">01 // INTRODUCTION</span>
+                <h2 class="sec-title">The person behind <em>the curiosity.</em></h2>
             </div>
 
             <div class="grid-12">
                 <div class="card taped span-12">
-                    <button type="button" class="lab-sticky" data-front="📌 Desk Note (Click)" data-back="☕ Best combo: Late evening revision + ginger chai!">📌 Desk Note (Click)</button>
-                    <span class="uv-secret">🔬 UV SECRET: Caffeine blocks adenosine receptors!</span>
+                    <button type="button" class="lab-sticky" data-front="📌 Desk Note (Click)" data-back="☕ Favorite routine: Evening study sessions with a warm cup of chai.">📌 Desk Note (Click)</button>
+                    <span class="uv-secret">🔬 UV SECRET: Caffeine competitively inhibits adenosine receptors!</span>
                     <p class="card-desc" style="font-size:17px;color:var(--text);">
-                        I’m <strong>Shaswat</strong>! Whenever I read a chapter in biology or physics, I always end up asking <em>"Wait, how does that actually happen in real life?"</em> Biology helps me understand the human body, and physics helps me make sense of the forces and light around us. When I’m not studying for school, I’m usually listening to music, reading random science facts, or having a hot cup of chai.
+                        I am <strong>Shaswat</strong>, a student driven by the fundamental questions behind the textbook. Whenever I study a concept in biology or physics, I look for how it operates in the real world. Biology helps me understand the intricacies of the human body, while physics explains the forces and optics that govern our environment. Beyond the classroom, I enjoy listening to music, exploring scientific literature, and unwinding over a warm cup of tea.
                     </p>
                 </div>
 
                 <div class="card span-3">
                     <span class="pill-badge">FAVORITE SUBJECTS</span>
                     <div class="card-title">Biology &amp; Physics</div>
-                    <p class="card-desc" style="font-size:13px;">Life sciences + how the universe works.</p>
+                    <p class="card-desc" style="font-size:13px;">Life sciences paired with physical laws.</p>
                 </div>
 
                 <div class="card span-3">
-                    <span class="pill-badge">FREE TIME</span>
-                    <div class="card-title">Music &amp; Exploring</div>
-                    <p class="card-desc" style="font-size:13px;">Curiosity outside the school textbook.</p>
+                    <span class="pill-badge">INTERESTS</span>
+                    <div class="card-title">Music &amp; Discovery</div>
+                    <p class="card-desc" style="font-size:13px;">Independent learning beyond the syllabus.</p>
                 </div>
 
                 <!-- Interactive Tea Counter Card -->
                 <div class="card span-3">
-                    <span class="pill-badge">STUDY FUEL</span>
+                    <span class="pill-badge">DAILY FUEL</span>
                     <div class="card-title" id="tea-count-title">3 Cups of Tea ☕</div>
                     <button type="button" class="mini-btn" id="tea-btn" data-pop="+1 Chai ☕" style="margin-top:6px;">Pour a Cup +1 ☕</button>
                 </div>
 
                 <div class="card span-3">
-                    <span class="pill-badge">BATCH</span>
+                    <span class="pill-badge">COHORT</span>
                     <div class="card-title">Class of 2027</div>
                     <p class="card-desc" id="batch-status-desc" style="font-size:13px;">Graduating in May 2027 (CBSE).</p>
                 </div>
@@ -1549,9 +1476,9 @@
         <!-- 3. CURIOSITY PLAYGROUND -->
         <section id="interests" class="section-block" data-scene="2">
             <div class="sec-head">
-                <span class="sec-tag">02 // STUFF I FIND COOL</span>
-                <h2 class="sec-title">Six topics I love <em>exploring.</em></h2>
-                <p class="sec-sub">Click around inside the cards below to try out each mini-experiment!</p>
+                <span class="sec-tag">02 // CORE CURIOSITY</span>
+                <h2 class="sec-title">Six scientific concepts I love <em>exploring.</em></h2>
+                <p class="sec-sub">Interact with the simulations inside each card below to see these biological and physical principles in action.</p>
             </div>
 
             <div class="grid-12">
@@ -1559,13 +1486,13 @@
                 <div class="card span-6">
                     <span class="uv-secret">🔬 UV SECRET: Chargaff's Rule: %A = %T and %C = %G</span>
                     <span class="pill-badge">TOPIC 01 // GENETICS</span>
-                    <h3 class="card-title">DNA Base-Pair Challenge</h3>
-                    <p class="card-desc">In DNA, <strong>A always pairs with T</strong>, and <strong>C always pairs with G</strong>. Can you complete the bottom strand by clicking the matching base for the highlighted letter?</p>
+                    <h3 class="card-title">DNA Base-Pairing &amp; Heredity</h3>
+                    <p class="card-desc">How does a microscopic molecule store the blueprint for an entire organism? In DNA, <strong>Adenine (A)</strong> pairs with <strong>Thymine (T)</strong>, and <strong>Cytosine (C)</strong> pairs with <strong>Guanine (G)</strong>. Complete the complementary strand below:</p>
 
                     <div class="play-box">
                         <div class="play-head">
                             <span id="dna-prompt">Match base #1: What pairs with A?</span>
-                            <button type="button" class="mini-btn" id="dna-reset-btn" data-pop="New Helix 🧬">New Strand ↻</button>
+                            <button type="button" class="mini-btn" id="dna-reset-btn" data-pop="New Helix 🧬">New Sequence ↻</button>
                         </div>
                         <div class="dna-helix-grid" id="dna-grid"></div>
                         <div class="base-btns">
@@ -1577,22 +1504,22 @@
                     </div>
 
                     <details class="note-toggle">
-                        <summary>Why aren't all our cells identical if they share the same DNA?</summary>
-                        <p>Even though your eye cells and muscle cells have the exact same DNA book, they only "read" the specific chapters they need!</p>
+                        <summary>Why do cells with identical DNA perform different functions?</summary>
+                        <p>Although every somatic cell shares the same genetic code, <strong>differential gene expression</strong> ensures that each cell activates only the specific genes required for its specialized role.</p>
                     </details>
                 </div>
 
                 <!-- Card 2: Simple Bicep & Tricep Arm Flex Simulator -->
                 <div class="card span-6">
-                    <span class="uv-secret">🔬 UV SECRET: Sliding Filament: Actin + Myosin + Ca²⁺</span>
-                    <span class="pill-badge">TOPIC 02 // HOW MUSCLES MOVE</span>
-                    <h3 class="card-title">How Muscles Pull (Bicep vs. Tricep)</h3>
-                    <p class="card-desc">Muscles can only pull, never push! That’s why they work in pairs. When you bend your arm, your <strong>bicep contracts</strong> while your <strong>tricep relaxes</strong>.</p>
+                    <span class="uv-secret">🔬 UV SECRET: Sliding Filament: Actin + Myosin + Calcium Ions</span>
+                    <span class="pill-badge">TOPIC 02 // BIOMECHANICS</span>
+                    <h3 class="card-title">Antagonistic Muscle Action</h3>
+                    <p class="card-desc">Skeletal muscles can only exert a pulling force, never a push, which is why they operate in antagonistic pairs. Bending the elbow requires the <strong>bicep to contract</strong> while the <strong>tricep relaxes</strong>.</p>
 
                     <div class="play-box">
                         <div class="play-head">
-                            <span id="arm-status">Arm: Relaxed (15%)</span>
-                            <span>Drag slider to flex 💪</span>
+                            <span id="arm-status">Flexion: 15% (Relaxed)</span>
+                            <span>Adjust slider to contract 💪</span>
                         </div>
                         <div class="arm-stage">
                             <svg class="arm-svg" viewBox="0 0 150 95" aria-hidden="true">
@@ -1606,50 +1533,50 @@
                                 <circle cx="80" cy="55" r="4" fill="#ffffff" />
                             </svg>
                             <div class="muscle-controls">
-                                <div id="muscle-detail">Bicep: Relaxed • Tricep: Stretched</div>
+                                <div id="muscle-detail">Bicep: Relaxed • Tricep: Extended</div>
                                 <input type="range" min="10" max="100" value="15" class="muscle-slider" id="arm-slider" aria-label="Flex arm muscle">
                             </div>
                         </div>
                     </div>
 
                     <details class="note-toggle">
-                        <summary>What fuels every muscle movement?</summary>
-                        <p>A tiny energy molecule called <strong>ATP</strong> plus calcium signals from your nerves tell the muscle fibres when to pull together.</p>
+                        <summary>What powers muscle contraction at the cellular level?</summary>
+                        <p>Molecules of <strong>ATP</strong> provide the energy while <strong>calcium ions</strong> released by nerve impulses enable actin and myosin filaments to slide past one another.</p>
                     </details>
                 </div>
 
                 <!-- Card 3: Hormones -->
                 <div class="card span-6">
-                    <span class="uv-secret">🔬 UV SECRET: Beta cells in Pancreas secrete Insulin</span>
-                    <span class="pill-badge">TOPIC 03 // HORMONES</span>
-                    <h3 class="card-title">Body’s Chemical Text Messages</h3>
-                    <p class="card-desc">Hormones are chemical messengers that keep our body balanced—like a thermostat that cools the room down when it gets too warm.</p>
+                    <span class="uv-secret">🔬 UV SECRET: Pancreatic Beta Cells secrete Insulin</span>
+                    <span class="pill-badge">TOPIC 03 // ENDOCRINOLOGY</span>
+                    <h3 class="card-title">Hormonal Homeostasis</h3>
+                    <p class="card-desc">The endocrine system maintains internal stability through chemical signaling, functioning much like a thermostat that restores balance whenever physiological levels shift.</p>
 
                     <div class="play-box">
                         <div class="play-head">
-                            <span id="snack-label">Blood Sugar: Normal 😊</span>
-                            <button type="button" class="mini-btn" id="snack-btn" data-pop="Glucose Spike 🍫">Eat a Sweet Snack 🍫</button>
+                            <span id="snack-label">Blood Glucose: 90 mg/dL (Stable)</span>
+                            <button type="button" class="mini-btn" id="snack-btn" data-pop="Glucose Spike 🍫">Simulate Meal 🍫</button>
                         </div>
                         <div class="balance-bar"><div class="balance-fill" id="snack-bar"></div></div>
                     </div>
 
                     <details class="note-toggle">
-                        <summary>How does the body bring sugar back down?</summary>
-                        <p>When blood sugar rises after a meal, the pancreas releases <strong>insulin</strong>, telling cells to absorb the glucose until levels are balanced again.</p>
+                        <summary>How does negative feedback regulate blood glucose?</summary>
+                        <p>When blood glucose rises after a meal, the pancreas secretes <strong>insulin</strong>, prompting cells to absorb glucose until normal baseline levels are restored.</p>
                     </details>
                 </div>
 
                 <!-- Card 4: Brain & Practice -->
                 <div class="card span-6">
                     <span class="uv-secret">🔬 UV SECRET: Hebb's Law: LTP strengthens synapses</span>
-                    <span class="pill-badge">TOPIC 04 // THE BRAIN</span>
-                    <h3 class="card-title">How Practice Rewires the Brain</h3>
-                    <p class="card-desc">Whenever you practice a new song or solve physics problems, the connection between your brain cells literally gets stronger!</p>
+                    <span class="pill-badge">TOPIC 04 // NEUROSCIENCE</span>
+                    <h3 class="card-title">Synaptic Plasticity &amp; Memory</h3>
+                    <p class="card-desc">Every time we practice a skill or solve a challenging problem, repeated electrical signaling physically reinforces the synaptic connections between neurons.</p>
 
                     <div class="play-box">
                         <div class="play-head">
-                            <span id="brain-label">Connection: New Topic (Level 1)</span>
-                            <button type="button" class="mini-btn" id="brain-btn" data-pop="+Synapse Fired ⚡">Practice Again ⚡</button>
+                            <span id="brain-label">Synaptic Strength: Baseline (Level 1)</span>
+                            <button type="button" class="mini-btn" id="brain-btn" data-pop="+Impulse Fired ⚡">Transmit Signal ⚡</button>
                         </div>
                         <div class="brain-nodes">
                             <span class="brain-dot"></span>
@@ -1659,22 +1586,22 @@
                     </div>
 
                     <details class="note-toggle">
-                        <summary>What is this brain superpower called?</summary>
-                        <p>It’s called <strong>neuroplasticity</strong> — "neurons that fire together, wire together!"</p>
+                        <summary>How does experience reshape neural pathways?</summary>
+                        <p><strong>Neuroplasticity</strong> allows the nervous system to strengthen frequently used synapses, making future signal transmission faster and more efficient.</p>
                     </details>
                 </div>
 
                 <!-- Card 5 (#3): Mini Wave & Optics Prism Splitter -->
                 <div class="card span-6">
                     <span class="uv-secret">🔬 UV SECRET: Snell's Law: n₁ sin(θ₁) = n₂ sin(θ₂)</span>
-                    <span class="pill-badge">TOPIC 05 // PHYSICS &amp; OPTICS</span>
-                    <h3 class="card-title">Light &amp; Prism Rainbow Splitter</h3>
-                    <p class="card-desc">When white light enters a glass prism, each color bends at a slightly different angle because of its wavelength—splitting into <strong>VIBGYOR</strong>!</p>
+                    <span class="pill-badge">TOPIC 05 // WAVE OPTICS</span>
+                    <h3 class="card-title">Optical Dispersion Through a Prism</h3>
+                    <p class="card-desc">When white light enters a glass prism, each constituent wavelength refracts at a distinct angle, separating the beam into the visible spectrum (<strong>VIBGYOR</strong>).</p>
 
                     <div class="play-box">
                         <div class="play-head">
-                            <span id="prism-readout">Incident Beam Angle: 45°</span>
-                            <span>Drag to bend light 🌈</span>
+                            <span id="prism-readout">Angle of Incidence: 45°</span>
+                            <span>Adjust incident angle 🌈</span>
                         </div>
                         <svg class="prism-svg-stage" viewBox="0 0 260 86" aria-hidden="true">
                             <line id="prism-in-ray" x1="10" y1="58" x2="106" y2="44" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
@@ -1693,8 +1620,8 @@
                     </div>
 
                     <details class="note-toggle">
-                        <summary>Why does violet bend more than red light?</summary>
-                        <p><strong>Violet light</strong> has a shorter wavelength and slows down slightly more inside glass than red light, causing a sharper bend (dispersion)!</p>
+                        <summary>Why does violet light refract more sharply than red light?</summary>
+                        <p><strong>Violet light</strong> has a shorter wavelength and experiences a higher refractive index in glass than red light, resulting in greater angular deviation.</p>
                     </details>
                 </div>
 
@@ -1702,8 +1629,8 @@
                 <div class="card span-6">
                     <span class="uv-secret">🔬 UV SECRET: SA Node = Natural Pacemaker (72 BPM)</span>
                     <span class="pill-badge">TOPIC 06 // CARDIAC PHYSIOLOGY</span>
-                    <h3 class="card-title">Heartbeat &amp; Adrenaline ECG Wave</h3>
-                    <p class="card-desc">Your heart’s natural pacemaker speeds up when adrenaline kicks in! Switch modes below to see how the ECG pulse wave changes:</p>
+                    <h3 class="card-title">Cardiac Cycle &amp; ECG Waveform</h3>
+                    <p class="card-desc">The sinoatrial (SA) node regulates heart rate, accelerating in response to sympathetic nervous stimulation and adrenaline. Compare the ECG waveforms below:</p>
 
                     <div class="play-box">
                         <div class="play-head">
@@ -1724,8 +1651,8 @@
                     </div>
 
                     <details class="note-toggle">
-                        <summary>What causes the tall spike on an ECG?</summary>
-                        <p>That sharp spike is the <strong>QRS complex</strong> — the electrical impulse telling the heart’s ventricles to contract and pump blood to your body!</p>
+                        <summary>What does the central peak on an ECG represent?</summary>
+                        <p>The prominent central spike is the <strong>QRS complex</strong>, which records the electrical depolarization of the ventricles as they contract to pump blood.</p>
                     </details>
                 </div>
             </div>
@@ -1738,14 +1665,14 @@
         <!-- 4. SCHOOL, SUBJECTS & QUICK-FIRE SCIENCE QUIZ -->
         <section id="academics" class="section-block" data-scene="3">
             <div class="sec-head">
-                <span class="sec-tag">03 // MY SCHOOL LIFE &amp; SCIENCE TRIVIA</span>
-                <h2 class="sec-title">Where I <em>study.</em></h2>
+                <span class="sec-tag">03 // EDUCATION &amp; SCIENCE QUIZ</span>
+                <h2 class="sec-title">Academic <em>foundation.</em></h2>
             </div>
 
             <div class="grid-12">
                 <div class="card taped span-6" style="display:flex;flex-direction:column;justify-content:center;">
-                    <button type="button" class="lab-sticky" data-front="📌 Lab Note (Click)" data-back="⚡ Favorite NCERT chapters: Ray Optics & Molecular Inheritance!">📌 Lab Note (Click)</button>
-                    <span class="uv-secret">🔬 UV SECRET: Lens Formula: 1/f = 1/v - 1/u</span>
+                    <button type="button" class="lab-sticky" data-front="📌 Study Note (Click)" data-back="⚡ Key areas of interest: Ray Optics & Molecular Inheritance.">📌 Study Note (Click)</button>
+                    <span class="uv-secret">🔬 UV SECRET: Thin Lens Formula: 1/f = 1/v - 1/u</span>
                     <span class="pill-badge" id="school-badge-text">CLASS 12 (CBSE) • GRADUATING MAY 2027</span>
                     <h3 class="card-title" style="font-size:24px;">Navyug International Public School, Uttar Pradesh</h3>
                     <div class="chip-row">
@@ -1754,15 +1681,15 @@
                         <span class="subject-chip"><b>B</b> Biology</span>
                     </div>
                     <p class="card-desc" id="school-desc-text">
-                        Currently in Senior Secondary (Class 12) taking the PCB science stream (graduating May 2027). I enjoy connecting what we learn in lab practicals and textbooks to real-world medicine and technology.
+                        Pursuing Senior Secondary education (Class 12, CBSE) in the Physics, Chemistry, and Biology (PCB) stream, with graduation scheduled for May 2027. I focus on connecting theoretical concepts and laboratory practicals with real-world applications in medicine and healthcare technology.
                     </p>
                 </div>
 
-                <!-- Quick-Fire Biology & Physics Quiz Card (Random 5 from 12 Pool) -->
+                <!-- Quick-Fire Biology & Physics Quiz Card -->
                 <div class="card span-6">
                     <span class="pill-badge">⚡ 60-SECOND SCIENCE CHALLENGE</span>
-                    <h3 class="card-title">Quick-Fire Bio &amp; Physics Quiz</h3>
-                    <p class="card-desc" style="font-size:14px;">5 random questions from a 12-question PCB bank every round!</p>
+                    <h3 class="card-title">Biology &amp; Physics Quick-Fire Quiz</h3>
+                    <p class="card-desc" style="font-size:14px;">Test your conceptual knowledge with five randomized questions from my core subjects.</p>
 
                     <div class="play-box">
                         <div class="play-head">
@@ -1772,7 +1699,7 @@
                         <div class="quiz-question" id="quiz-question">Loading question...</div>
                         <div class="quiz-options" id="quiz-options"></div>
                         <div class="quiz-foot">
-                            <span class="quiz-feedback" id="quiz-feedback">Pick an option above!</span>
+                            <span class="quiz-feedback" id="quiz-feedback">Select an answer above to begin.</span>
                             <button type="button" class="mini-btn" id="quiz-next-btn" style="display:none;">Next Question →</button>
                         </div>
                     </div>
@@ -1787,18 +1714,18 @@
         <!-- 5. HELPING OUT AT SCHOOL (PREFECT) -->
         <section id="leadership" class="section-block" data-scene="4">
             <div class="sec-head">
-                <span class="sec-tag">04 // RESPONSIBILITY</span>
-                <h2 class="sec-title">Helping out at <em>school.</em></h2>
+                <span class="sec-tag">04 // STUDENT LEADERSHIP</span>
+                <h2 class="sec-title">Leading by <em>example.</em></h2>
             </div>
 
             <div class="grid-12">
                 <div class="card taped span-12">
-                    <span class="pill-badge" id="prefect-badge-text">AUGUST 2025 – PRESENT (SINCE CLASS 11)</span>
+                    <span class="pill-badge" id="prefect-badge-text">AUGUST 2025 – PRESENT (SINCE 11TH GRADE)</span>
                     <h3 class="card-title" style="font-size:24px;">School Prefect — Navyug International Public School</h3>
                     <ul class="check-list">
-                        <li>Helping teachers and fellow students keep our school events and daily routines running smoothly since 11th grade.</li>
-                        <li>Being a friendly senior and classmate that students can talk to when they need help with studies or day-to-day school stuff.</li>
-                        <li>Learning teamwork, patience, and how to stay responsible by showing up every day.</li>
+                        <li>Assisting faculty and fellow students in maintaining campus discipline and coordinating daily school assemblies and events since 11th grade.</li>
+                        <li>Serving as an approachable peer mentor for students seeking guidance with academic or day-to-day school matters.</li>
+                        <li>Developing teamwork, patience, and accountability through consistent daily responsibility.</li>
                     </ul>
                 </div>
             </div>
@@ -1808,30 +1735,30 @@
             <path d="M0,14 Q125,0 250,14 T500,14 T750,14 T1000,14"/>
         </svg>
 
-        <!-- 6. COOL MOMENTS (ACHIEVEMENTS + UPGRADED CARDBOARD MICROSCOPE) -->
+        <!-- 6. COOL MOMENTS (ACHIEVEMENTS + BASIC FUNCTIONAL OPTICAL MICROSCOPE) -->
         <section id="achievements" class="section-block" data-scene="5">
             <div class="sec-head">
-                <span class="sec-tag">05 // PROUD MOMENTS</span>
-                <h2 class="sec-title">Milestones so <em>far.</em></h2>
+                <span class="sec-tag">05 // HONORS &amp; MILESTONES</span>
+                <h2 class="sec-title">Effort, <em>made visible.</em></h2>
             </div>
 
             <div class="grid-12">
                 <div class="card span-5" style="display:flex;flex-direction:column;justify-content:center;">
-                    <span class="uv-secret">🔬 UV SECRET: Consistency > Last-minute cramming!</span>
-                    <span class="pill-badge">CLASS 10 BOARDS • CBSE</span>
-                    <div style="font:600 72px/1 var(--display);color:var(--accent);margin:8px 0 14px;">99%</div>
-                    <h3 class="card-title">99% in Class 10th Board Exams</h3>
+                    <span class="uv-secret">🔬 UV SECRET: Consistency &amp; conceptual clarity!</span>
+                    <span class="pill-badge">ACADEMIC DISTINCTION • CBSE BOARD</span>
+                    <div style="font:400 80px/0.95 var(--display);color:var(--accent);margin:8px 0 14px;">99%</div>
+                    <h3 class="card-title">99% in Class 10th Board Examinations</h3>
                     <p class="card-desc">
-                        Worked hard and scored 99% in my CBSE Class 10th Board Exams—a milestone that motivated me to dive even deeper into science in Class 11 and 12.
+                        Achieved a 99% score in the CBSE Class 10th Board Examinations, a milestone reflecting sustained dedication and conceptual clarity that inspired my pursuit of the life and physical sciences.
                     </p>
                 </div>
 
                 <div class="card span-7">
-                    <span class="uv-secret">🔬 UV SECRET: Total Mag = M_objective × M_eyepiece</span>
-                    <span class="pill-badge">2ND PRIZE • SCHOOL SCIENCE EXHIBITION</span>
-                    <h3 class="card-title">My DIY Cardboard Optical Microscope</h3>
+                    <span class="uv-secret">🔬 UV SECRET: Optical Alignment &amp; Focal Length</span>
+                    <span class="pill-badge">2ND PRIZE • SCIENCE &amp; HUMANITIES EXHIBITION</span>
+                    <h3 class="card-title">Basic Functional Optical Microscope</h3>
                     <p class="card-desc">
-                        Won 2nd Prize for building a working compound microscope out of cardboard tubes and two aligned convex lenses! Switch slides, change magnification, and turn the focus knob below:
+                        Awarded Second Prize at the School Science &amp; Humanities Exhibition for designing and constructing a basic functional optical microscope using cardboard tubes and aligned convex lenses. Switch slides, adjust magnification, and focus the lens below:
                     </p>
 
                     <div class="microscope-lab">
@@ -1860,10 +1787,10 @@
                                     <span id="micro-focus-status">Sharp Focus ✓</span>
                                 </div>
                                 <p id="micro-slide-desc" style="font-size:12.5px;color:var(--body);margin-bottom:10px;">
-                                    Brick-like plant cell walls with dark stained nuclei inside each cell.
+                                    Rectangular plant cell walls stained with iodine, revealing a distinct nucleus within each cell.
                                 </p>
                                 <label for="focus-slider" style="font:700 10px var(--mono);color:var(--muted);display:block;">
-                                    COARSE FOCUS TUBE KNOB (DRAG TO ALIGN LENSES):
+                                    COARSE FOCUS ADJUSTMENT (DRAG TO ALIGN LENSES):
                                 </label>
                                 <input type="range" min="0" max="100" value="72" id="focus-slider" class="muscle-slider">
                             </div>
@@ -1880,32 +1807,32 @@
         <!-- 7. SAY HI & VISITOR POLL -->
         <section id="connect" class="section-block" data-scene="6">
             <div class="sec-head">
-                <span class="sec-tag">06 // SAY HELLO</span>
-                <h2 class="sec-title">Let’s <em>connect!</em></h2>
+                <span class="sec-tag">06 // GET IN TOUCH</span>
+                <h2 class="sec-title">Let’s <em>connect.</em></h2>
             </div>
 
             <div class="grid-12">
                 <div class="card span-6">
-                    <span class="pill-badge">QUICK QUESTION FOR YOU</span>
-                    <h3 class="card-title">Which mini-experiment did you like most?</h3>
+                    <span class="pill-badge">VISITOR FEEDBACK</span>
+                    <h3 class="card-title">Which interactive module did you enjoy most?</h3>
                     <div class="poll-grid" id="poll-grid">
-                        <button type="button" class="poll-btn" data-pop="DNA Picked 🧬" data-reply="Genetics is awesome! Crazy how 4 letters (A, T, C, G) code for all of life.">🧬 DNA Base-Pair Game</button>
-                        <button type="button" class="poll-btn" data-pop="Biomechanics 💪" data-reply="Biceps & triceps working as an antagonistic pair is such a cool bio concept!">💪 Arm Flex Simulator</button>
-                        <button type="button" class="poll-btn" data-pop="Quiz Champion ⚡" data-reply="The quick-fire quiz is super fun! Hope you got a 5/5!">⚡ Science Quiz</button>
-                        <button type="button" class="poll-btn" data-pop="Optics Fan 🔬" data-reply="Building that cardboard microscope was super fun—seeing onion cells through cardboard is surreal!">🔬 Cardboard Microscope</button>
+                        <button type="button" class="poll-btn" data-pop="DNA Selected 🧬" data-reply="Genetics is fascinating — it is remarkable how four nucleotide bases encode the blueprint for all living organisms.">🧬 DNA Base-Pairing</button>
+                        <button type="button" class="poll-btn" data-pop="Biomechanics 💪" data-reply="Antagonistic muscle pairs are a great example of physics and physiology working together.">💪 Muscle Biomechanics</button>
+                        <button type="button" class="poll-btn" data-pop="Science Quiz ⚡" data-reply="Thank you for trying the quick-fire science quiz! I hope you enjoyed the questions.">⚡ Science Quiz</button>
+                        <button type="button" class="poll-btn" data-pop="Optics Lab 🔬" data-reply="Building that basic functional optical microscope was a memorable project — observing cellular structures through a handmade instrument is surreal.">🔬 Basic Optical Microscope</button>
                     </div>
                     <p id="poll-reply" style="margin-top:12px;font-size:13.5px;color:var(--accent);min-height:20px;"></p>
                 </div>
 
                 <a href="https://www.linkedin.com/in/shaswat-upadhyay-0b8280444" target="_blank" rel="noopener noreferrer" class="card span-6" style="display:flex;flex-direction:column;justify-content:center;">
-                    <span class="pill-badge">LET'S STAY IN TOUCH</span>
+                    <span class="pill-badge">PROFESSIONAL NETWORK</span>
                     <div style="display:flex;align-items:center;gap:16px;margin-top:6px;">
                         <div style="width:52px;height:52px;border-radius:14px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:grid;place-items:center;flex-shrink:0;">
                             <svg width="26" height="26" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                         </div>
                         <div>
-                            <h3 class="card-title" style="margin-bottom:4px;">Connect with me on LinkedIn ↗</h3>
-                            <p class="card-desc" style="font-size:14px;">Always happy to chat about biology, science projects, or school life!</p>
+                            <h3 class="card-title" style="margin-bottom:4px;">Connect on LinkedIn ↗</h3>
+                            <p class="card-desc" style="font-size:14px;">Always glad to connect and discuss biology, science projects, or healthcare technology.</p>
                         </div>
                     </div>
                 </a>
@@ -1946,23 +1873,23 @@
             const prefectBadgeEl = document.getElementById('prefect-badge-text');
 
             if (hasGraduatedMay2027) {
-                heroGreetEl.textContent = `${timeGreeting} I’m a Class of 2027 Graduate`;
-                batchStatusEl.textContent = 'Graduated May 2027 (CBSE).';
+                heroGreetEl.textContent = `${timeGreeting} I am a Class of 2027 Graduate`;
+                batchStatusEl.textContent = 'Graduated in May 2027 (CBSE).';
                 schoolBadgeEl.textContent = 'SENIOR SECONDARY (CLASS 12, CBSE) • BATCH OF 2027';
-                schoolDescEl.textContent = 'Completed Senior Secondary (Class 12) in the PCB science stream (May 2027), building a strong foundation in biology, physics, and chemistry for medicine and healthcare technology.';
+                schoolDescEl.textContent = 'Completed Senior Secondary education (Class 12, CBSE) in the Physics, Chemistry, and Biology (PCB) stream in May 2027, establishing a strong analytical foundation for medicine and healthcare technology.';
                 prefectBadgeEl.textContent = '2025 – 2027 (11TH & 12TH GRADE)';
             } else {
-                heroGreetEl.textContent = `${timeGreeting} I’m a Class 12 Student (Graduating May 2027)`;
+                heroGreetEl.textContent = `${timeGreeting} I am a Class 12 Student (Graduating May 2027)`;
             }
 
             const dailyFacts = [
-                'Your body produces about 2 million new red blood cells every single second!',
-                'If you uncoiled all the DNA in your body, it would stretch to Pluto and back!',
-                'Light takes 8 minutes and 20 seconds to travel from the Sun to your eyes.',
-                'Your brain generates about 20 watts of electrical power—enough to dim-light a bulb!',
-                'The human eye can distinguish approximately 10 million different colors.',
-                'Mitochondria have their own separate DNA passed down from your mother!',
-                'Nerve impulses in the human body can travel at speeds over 100 meters per second.'
+                'The human body produces approximately two million new red blood cells every single second.',
+                'If all the DNA in a single human body were uncoiled, it would stretch to Pluto and back.',
+                'Light takes approximately 8 minutes and 20 seconds to travel from the Sun to the Earth.',
+                'The human brain generates roughly 20 watts of electrical power while awake.',
+                'The human eye is capable of distinguishing approximately 10 million different colors.',
+                'Mitochondria possess their own circular DNA, inherited maternally across generations.',
+                'Myelinated nerve impulses in the human body can travel at speeds exceeding 100 meters per second.'
             ];
             const dayOfYear = Math.floor((now - new Date(year, 0, 0)) / 86400000);
             document.getElementById('daily-fact-text').textContent = dailyFacts[dayOfYear % dailyFacts.length];
@@ -2072,16 +1999,6 @@
             });
         });
 
-        /* #7: Portrait Bio-Scan X-Ray Toggle */
-        const bioscanBtn = document.getElementById('bioscan-btn');
-        const photoFrame = document.getElementById('photo-frame');
-        bioscanBtn.addEventListener('click', () => {
-            const active = photoFrame.classList.toggle('xray-on');
-            bioscanBtn.setAttribute('aria-pressed', String(active));
-            bioscanBtn.textContent = active ? '✕ Exit Scan' : '🔬 Bio-Scan';
-            playTone(active ? 740 : 420, 'sine', 0.12, 0.045);
-        });
-
         /* ==========================================================================
            #1 FIXED: WORKING UV SPOTLIGHT, WORD-BY-WORD MARKER, & OPTICAL LOUPE
            ========================================================================== */
@@ -2089,11 +2006,9 @@
         const penTool = document.getElementById('pen-tool');
         const loupeTool = document.getElementById('loupe-tool');
         const uvSecrets = [...document.querySelectorAll('.uv-secret')];
-        const allCards = [...document.querySelectorAll('.card')];
         let wordsTokenized = false;
         let isDraggingMarker = false;
 
-        /* Tokenize paragraphs into individual clickable/draggable words once Marker is used */
         function tokenizeWordsForMarker() {
             if (wordsTokenized) return;
             wordsTokenized = true;
@@ -2245,7 +2160,7 @@
 
         portalSlider.addEventListener('input', () => {
             const v = Number(portalSlider.value);
-            portalPct.textContent = `Spark: ${v}%`;
+            portalPct.textContent = `Impulse: ${v}%`;
             playSliderGlide(v, 300, 760);
             if (v >= 92) unlockNotebook();
         });
@@ -2259,6 +2174,7 @@
         let width = window.innerWidth;
         let height = window.innerHeight;
         let currentScene = 0;
+        let isFastNavScrolling = false;
 
         function resizeCanvas() {
             width = canvas.width = window.innerWidth;
@@ -2277,7 +2193,7 @@
             { name: '🌌 Aurora Glow', color: '199, 125, 255', vy: -0.12, connect: true, hex: '#140d24' }
         ];
 
-        const particles = Array.from({ length: 38 }, () => ({
+        const particles = Array.from({ length: 34 }, () => ({
             x: Math.random() * width,
             y: Math.random() * height,
             r: Math.random() * 2 + 1,
@@ -2289,26 +2205,28 @@
         let lastTrailTime = 0;
 
         function spawnSpark(x, y, burst = false) {
-            const count = burst ? 12 : 1;
+            if (isFastNavScrolling) return;
+            const count = burst ? 10 : 1;
             const cfg = sceneConfigs[currentScene] || sceneConfigs[0];
             for (let i = 0; i < count; i++) {
-                if (sparks.length > 90) sparks.shift();
+                if (sparks.length > 75) sparks.shift();
                 const angle = Math.random() * Math.PI * 2;
-                const speed = burst ? (Math.random() * 3.2 + 1.2) : (Math.random() * 0.9 + 0.2);
+                const speed = burst ? (Math.random() * 3.0 + 1.1) : (Math.random() * 0.8 + 0.2);
                 sparks.push({
                     x,
                     y,
                     vx: Math.cos(angle) * speed,
                     vy: Math.sin(angle) * speed - (burst ? 0.4 : 0.2),
-                    r: burst ? (Math.random() * 2.4 + 1.4) : (Math.random() * 1.8 + 1),
+                    r: burst ? (Math.random() * 2.2 + 1.2) : (Math.random() * 1.6 + 1),
                     life: 1,
-                    decay: burst ? 0.028 : 0.045,
+                    decay: burst ? 0.032 : 0.05,
                     color: cfg.color
                 });
             }
         }
 
         window.addEventListener('pointermove', e => {
+            if (isFastNavScrolling) return;
             if (document.body.classList.contains('uv-active')) {
                 updateUvSpotlight(e.clientX, e.clientY);
             }
@@ -2320,7 +2238,7 @@
                 if (word) markWord(word, false);
             }
             const now = performance.now();
-            if (now - lastTrailTime > 28) {
+            if (now - lastTrailTime > 32) {
                 spawnSpark(e.clientX, e.clientY, false);
                 lastTrailTime = now;
             }
@@ -2340,7 +2258,7 @@
         });
 
         function drawAmbientSky() {
-            if (!document.hidden) {
+            if (!document.hidden && !isFastNavScrolling) {
                 ctx.clearRect(0, 0, width, height);
                 const cfg = sceneConfigs[currentScene] || sceneConfigs[0];
 
@@ -2397,14 +2315,13 @@
         requestAnimationFrame(drawAmbientSky);
 
         /* ==========================================================================
-           3. NEVER-STUCK VIEWPORT CENTER TRACKER (WITH NAV-LOCK & SCROLLEND SYNC)
+           3. ZERO-LAG NAVBAR SCROLL ENGINE & VIEWPORT TRACKER
            ========================================================================== */
         const sections = [...document.querySelectorAll('.section-block')];
         const navLinks = [...document.querySelectorAll('.nav-link')];
         const scenePill = document.getElementById('scene-pill');
         const scrollBar = document.getElementById('scroll-bar');
         const themeMeta = document.querySelector('meta[name="theme-color"]');
-        let navJumpLockUntil = 0;
         let scrollSettleTimer = null;
 
         function applyScene(idx) {
@@ -2416,14 +2333,13 @@
             navLinks.forEach((link, i) => link.classList.toggle('active', i === idx));
         }
 
-        function updateActiveSectionOnScroll(force = false) {
+        function updateActiveSectionOnScroll() {
             const docHeight = document.documentElement.scrollHeight - window.innerHeight;
             const pct = docHeight > 0 ? Math.min(1, Math.max(0, window.scrollY / docHeight)) : 0;
             scrollBar.style.transform = `scaleX(${Math.max(0.08, pct)})`;
 
-            if (!force && performance.now() < navJumpLockUntil) return;
+            if (isFastNavScrolling) return;
 
-            /* If scrolled to the very bottom, lock onto the last section */
             if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 25) {
                 if (currentScene !== sections.length - 1) applyScene(sections.length - 1);
                 return;
@@ -2455,13 +2371,19 @@
         window.addEventListener('scroll', () => {
             if (!scrollTicking) {
                 requestAnimationFrame(() => {
-                    updateActiveSectionOnScroll(false);
+                    updateActiveSectionOnScroll();
                     scrollTicking = false;
                 });
                 scrollTicking = true;
             }
             clearTimeout(scrollSettleTimer);
-            scrollSettleTimer = setTimeout(() => updateActiveSectionOnScroll(true), 120);
+            scrollSettleTimer = setTimeout(() => {
+                if (isFastNavScrolling) {
+                    isFastNavScrolling = false;
+                    document.body.classList.remove('nav-scrolling');
+                }
+                updateActiveSectionOnScroll();
+            }, 140);
         }, { passive: true });
 
         const menuBtn = document.getElementById('menu-btn');
@@ -2470,12 +2392,24 @@
             const open = navBoxLinks.classList.toggle('open');
             menuBtn.textContent = open ? 'Close −' : 'Menu +';
         });
+
+        /* Smooth, Lag-Free Navbar Section Jump */
         navLinks.forEach((link, idx) => {
-            link.addEventListener('click', () => {
-                navJumpLockUntil = performance.now() + 750;
-                applyScene(idx);
+            link.addEventListener('click', e => {
+                e.preventDefault();
                 navBoxLinks.classList.remove('open');
                 menuBtn.textContent = 'Menu +';
+
+                isFastNavScrolling = true;
+                document.body.classList.add('nav-scrolling');
+                applyScene(idx);
+
+                const targetSection = sections[idx];
+                if (targetSection) {
+                    const topOffset = targetSection.getBoundingClientRect().top + window.scrollY - 84;
+                    window.scrollTo({ top: topOffset, behavior: 'smooth' });
+                    history.replaceState(null, '', '#' + targetSection.id);
+                }
             });
         });
 
@@ -2499,9 +2433,9 @@
                 dnaGrid.appendChild(slot);
             });
             if (activeSlot < templateStrand.length) {
-                dnaPrompt.textContent = `Base #${activeSlot + 1}: What pairs with ${templateStrand[activeSlot]}?`;
+                dnaPrompt.textContent = `Base #${activeSlot + 1}: Which base pairs with ${templateStrand[activeSlot]}?`;
             } else {
-                dnaPrompt.textContent = '🎉 Full DNA Helix Zipped Together!';
+                dnaPrompt.textContent = '🎉 Complementary DNA Strand Complete!';
             }
         }
 
@@ -2522,7 +2456,7 @@
                     playTone(190, 'sawtooth', 0.14, 0.04, 140);
                     const currentEl = dnaGrid.children[activeSlot];
                     currentEl.classList.add('wrong');
-                    dnaPrompt.textContent = `Oops! Remember: A↔T and C↔G. Try ${templateStrand[activeSlot]} again!`;
+                    dnaPrompt.textContent = `Remember Chargaff's rule: A pairs with T, and C pairs with G.`;
                     setTimeout(() => currentEl.classList.remove('wrong'), 450);
                 }
             });
@@ -2538,19 +2472,19 @@
         renderDnaGame();
 
         /* ==========================================================================
-           5. QUICK-FIRE BIOLOGY & PHYSICS QUIZ (RANDOM 5 FROM 12-QUESTION BANK)
+           5. QUICK-FIRE BIOLOGY & PHYSICS QUIZ (ACCURATE RIGHT/WRONG FEEDBACK)
            ========================================================================== */
         const fullQuestionBank = [
-            { q: 'Which organelle is famous for generating ATP energy inside our cells?', options: ['Ribosome', 'Mitochondria', 'Golgi Body', 'Lysosome'], answer: 1, fact: 'Spot on! Mitochondria synthesize ATP through cellular respiration.' },
-            { q: 'What type of lens is used in a magnifying glass & compound microscope?', options: ['Convex Lens', 'Concave Lens', 'Plane Mirror', 'Prism'], answer: 0, fact: 'Correct! Convex (converging) lenses bend light rays inward to magnify tiny objects.' },
-            { q: 'Which nitrogenous base replaces Thymine (T) when DNA is transcribed into RNA?', options: ['Adenine (A)', 'Cytosine (C)', 'Uracil (U)', 'Guanine (G)'], answer: 2, fact: 'Nice! In RNA, Adenine pairs with Uracil (U) instead of Thymine.' },
-            { q: 'When white light passes through a glass prism, which color bends the MOST?', options: ['Red', 'Yellow', 'Green', 'Violet'], answer: 3, fact: 'Yes! Violet has the shortest wavelength in visible light, so it refracts the most.' },
-            { q: 'Which part of the human brain controls balance, posture, and smooth movement?', options: ['Cerebellum', 'Medulla', 'Thalamus', 'Hypothalamus'], answer: 0, fact: 'Awesome! The cerebellum fine-tunes motor coordination and balance.' },
-            { q: 'What is the SI unit of electric current in physics?', options: ['Volt', 'Ohm', 'Ampere', 'Watt'], answer: 2, fact: 'Correct! Electric current is measured in Amperes (A).' },
-            { q: 'Which blood vessels carry oxygenated blood away from the heart to the body?', options: ['Veins', 'Arteries', 'Venules', 'Lymphatics'], answer: 1, fact: 'Right! Arteries carry oxygenated blood away from the heart under high pressure.' },
-            { q: 'Which phenomenon proves that light waves are transverse in nature?', options: ['Reflection', 'Refraction', 'Polarization', 'Diffraction'], answer: 2, fact: 'Spot on! Only transverse waves can be polarized.' },
-            { q: 'What is the functional filtration unit of the human kidney called?', options: ['Neuron', 'Nephron', 'Alveoli', 'Sarcomere'], answer: 1, fact: 'Yes! Each kidney contains about 1 million filtering nephrons.' },
-            { q: 'Which plant hormone is primarily responsible for cell elongation towards light?', options: ['Auxin', 'Abscisic Acid', 'Ethylene', 'Cytokinin'], answer: 0, fact: 'Correct! Auxin accumulates on the shaded side, bending the shoot toward light.' }
+            { q: 'Which organelle is responsible for generating ATP through cellular respiration?', options: ['Ribosome', 'Mitochondria', 'Golgi Apparatus', 'Lysosome'], answer: 1, fact: 'Mitochondria serve as the primary sites of ATP synthesis in eukaryotic cells.' },
+            { q: 'Which type of lens is used to converge light in a basic functional optical microscope?', options: ['Convex Lens', 'Concave Lens', 'Plane Mirror', 'Cylindrical Lens'], answer: 0, fact: 'Convex (converging) lenses bend light rays inward to produce a magnified image.' },
+            { q: 'Which nitrogenous base replaces Thymine (T) during RNA transcription?', options: ['Adenine (A)', 'Cytosine (C)', 'Uracil (U)', 'Guanine (G)'], answer: 2, fact: 'In RNA, Adenine pairs with Uracil (U) rather than Thymine.' },
+            { q: 'When white light passes through a glass prism, which color undergoes the greatest deviation?', options: ['Red', 'Yellow', 'Green', 'Violet'], answer: 3, fact: 'Violet light has the shortest wavelength in the visible spectrum and refracts the most.' },
+            { q: 'Which region of the human brain coordinates voluntary movement, posture, and balance?', options: ['Cerebellum', 'Medulla Oblongata', 'Thalamus', 'Hypothalamus'], answer: 0, fact: 'The cerebellum fine-tunes motor activity, posture, and physical equilibrium.' },
+            { q: 'What is the SI unit of electric current?', options: ['Volt', 'Ohm', 'Ampere', 'Watt'], answer: 2, fact: 'Electric current is measured in Amperes (A).' },
+            { q: 'Which blood vessels transport oxygenated blood away from the heart to the systemic circulation?', options: ['Veins', 'Arteries', 'Venules', 'Lymph Vessels'], answer: 1, fact: 'Arteries carry oxygenated blood away from the heart under high pressure.' },
+            { q: 'Which optical phenomenon demonstrates that light waves are transverse in nature?', options: ['Reflection', 'Refraction', 'Polarization', 'Diffraction'], answer: 2, fact: 'Only transverse waves can undergo polarization.' },
+            { q: 'What is the microscopic structural and functional filtration unit of the human kidney?', options: ['Neuron', 'Nephron', 'Alveolus', 'Sarcomere'], answer: 1, fact: 'Each human kidney contains approximately one million filtering nephrons.' },
+            { q: 'Which plant hormone regulates phototropism by promoting cell elongation on the shaded side of a shoot?', options: ['Auxin', 'Abscisic Acid', 'Ethylene', 'Cytokinin'], answer: 0, fact: 'Auxin accumulates on the shaded side, stimulating cell elongation toward light.' }
         ];
 
         function pickRandomQuizSet() {
@@ -2577,7 +2511,8 @@
             qProgressEl.textContent = `Question ${qIndex + 1} of ${quizQuestions.length}`;
             qScoreEl.textContent = `Score: ${qScore} / ${quizQuestions.length}`;
             qQuestionEl.textContent = `${qIndex + 1}. ${item.q}`;
-            qFeedbackEl.textContent = 'Pick an option above!';
+            qFeedbackEl.textContent = 'Select an answer above to continue.';
+            qFeedbackEl.style.color = 'var(--accent-2)';
             qOptionsEl.innerHTML = '';
 
             item.options.forEach((optText, i) => {
@@ -2601,18 +2536,20 @@
             if (selectedIndex === item.answer) {
                 qScore++;
                 clickedBtn.classList.add('correct');
-                qFeedbackEl.textContent = '✅ ' + item.fact;
+                qFeedbackEl.style.color = '#52f2a8';
+                qFeedbackEl.textContent = `✅ Correct! ${item.fact}`;
                 playTone(587.33, 'triangle', 0.1, 0.055);
                 setTimeout(() => playTone(880, 'triangle', 0.15, 0.06), 80);
             } else {
                 clickedBtn.classList.add('wrong');
                 allBtns[item.answer].classList.add('correct');
-                qFeedbackEl.textContent = '💡 Not quite! ' + item.fact;
+                qFeedbackEl.style.color = '#ff9e9e';
+                qFeedbackEl.textContent = `❌ Incorrect — the right answer is ${item.options[item.answer]}. ${item.fact}`;
                 playTone(210, 'sawtooth', 0.15, 0.04, 150);
             }
 
             qScoreEl.textContent = `Score: ${qScore} / ${quizQuestions.length}`;
-            qNextBtn.textContent = qIndex < quizQuestions.length - 1 ? 'Next Question →' : 'See Final Score 🏆';
+            qNextBtn.textContent = qIndex < quizQuestions.length - 1 ? 'Next Question →' : 'View Final Score 🏆';
             qNextBtn.style.display = 'inline-block';
         }
 
@@ -2630,13 +2567,14 @@
                 qNextBtn.dataset.done = 'true';
                 qProgressEl.textContent = 'Quiz Complete!';
                 const msg = qScore === 5
-                    ? '🎉 Perfect 5/5! You’re a natural PCB scientist!'
+                    ? '🎉 Outstanding! You achieved a perfect 5/5 in Biology and Physics.'
                     : qScore >= 3
-                    ? `👏 Great job! You scored ${qScore}/5 in Bio & Physics!`
-                    : `🔬 You scored ${qScore}/5 — science is all about experimenting!`;
+                    ? `👏 Well done! You scored ${qScore}/5.`
+                    : `🔬 You scored ${qScore}/5 — thank you for taking the challenge!`;
                 qQuestionEl.textContent = msg;
                 qOptionsEl.innerHTML = '';
-                qFeedbackEl.textContent = 'Click Play Again for 5 new random questions!';
+                qFeedbackEl.style.color = 'var(--accent)';
+                qFeedbackEl.textContent = 'Select Play Again for a new set of five questions.';
                 qNextBtn.textContent = 'Play Again ↻';
                 playUnlockChord();
             }
@@ -2644,12 +2582,12 @@
         renderQuizQuestion();
 
         /* ==========================================================================
-           6. UPGRADED DIY CARDBOARD MICROSCOPE SIMULATOR
+           6. BASIC FUNCTIONAL OPTICAL MICROSCOPE SIMULATOR
            ========================================================================== */
         const slideData = {
             onion: {
                 title: 'Slide: Onion Epidermal Cells',
-                desc: 'Brick-like plant cell walls stained with iodine, showing a clear nucleus inside each rectangular cell.',
+                desc: 'Rectangular plant cell walls stained with iodine, revealing a distinct nucleus within each cell.',
                 svg: `
                     <g stroke="#52f2a8" stroke-width="2" fill="rgba(82,242,168,0.12)">
                         <rect x="8" y="12" width="40" height="24" rx="3"/><circle cx="28" cy="24" r="4" fill="#ffd43b"/>
@@ -2662,7 +2600,7 @@
             },
             stomata: {
                 title: 'Slide: Leaf Stomata & Guard Cells',
-                desc: 'Kidney-shaped guard cells surrounding tiny pores that plants use to breathe CO₂ and release oxygen.',
+                desc: 'Kidney-shaped guard cells regulating microscopic stomatal pores for gas exchange and transpiration.',
                 svg: `
                     <g stroke="#69db7c" stroke-width="2" fill="rgba(105,219,124,0.16)">
                         <ellipse cx="32" cy="34" rx="14" ry="9"/><ellipse cx="32" cy="34" rx="4" ry="7" fill="#07120e"/>
@@ -2672,8 +2610,8 @@
                     </g>`
             },
             pond: {
-                title: 'Slide: Pond Drop (Paramecium)',
-                desc: 'Single-celled slipper-shaped organisms swimming around with tiny hair-like cilia and contractile vacuoles.',
+                title: 'Slide: Pond Water (Paramecium)',
+                desc: 'Unicellular ciliated protozoans propelled by rhythmic hair-like cilia and osmoregulatory vacuoles.',
                 svg: `
                     <g stroke="#38e4ff" stroke-width="2" fill="rgba(56,228,255,0.18)">
                         <ellipse cx="42" cy="38" rx="22" ry="10" transform="rotate(-20 42 38)"/>
@@ -2711,7 +2649,7 @@
                 microFocusStatus.style.color = 'var(--accent)';
                 if (playTick && focusVal === 72) playTone(880, 'triangle', 0.1, 0.05);
             } else {
-                microFocusStatus.textContent = `Blurry — Turn Knob (${focusVal}%)`;
+                microFocusStatus.textContent = `Out of Focus — Adjust Knob (${focusVal}%)`;
                 microFocusStatus.style.color = 'var(--accent-2)';
                 if (playTick) playSliderGlide(focusVal, 320, 560);
             }
@@ -2742,8 +2680,8 @@
            7. OTHER STUDENT WIDGETS (TYPEWRITER, TEA, ARM FLEX, PRISM, ECG, POLL)
            ========================================================================== */
         const phrases = [
-            'Loving Biology & Physics',
-            'Curious about Medicine & Tech',
+            'Exploring Biology & Physics',
+            'Interested in Medicine & Healthcare Tech',
             'School Prefect · Class of 2027'
         ];
         let pIdx = 0;
@@ -2761,12 +2699,12 @@
             playTone(380 + teaCups * 45, 'sine', 0.09, 0.05, 620 + teaCups * 45);
             const msgs = [
                 '1 Cup of Tea ☕ (Morning start)',
-                '2 Cups of Tea ☕ (Warming up)',
-                '3 Cups of Tea ☕ (Daily sweet spot!)',
+                '2 Cups of Tea ☕ (Afternoon focus)',
+                '3 Cups of Tea ☕ (Daily optimum)',
                 '4 Cups of Tea ☕ (Evening revision)',
-                '5 Cups of Tea ☕ (Physics numericals)',
-                '6 Cups of Tea ☕ (Exam week fuel!)',
-                '7 Cups of Tea ☕ (Maximum chai power!)'
+                '5 Cups of Tea ☕ (Physics problem-solving)',
+                '6 Cups of Tea ☕ (Exam preparation)',
+                '7 Cups of Tea ☕ (Maximum study fuel)'
             ];
             document.getElementById('tea-count-title').textContent = msgs[teaCups - 1];
         });
@@ -2790,10 +2728,10 @@
 
             playSliderGlide(val, 240, 480);
 
-            armStatus.textContent = `Arm Flex: ${val}%`;
+            armStatus.textContent = `Flexion: ${val}%`;
             muscleDetail.textContent = val > 60
-                ? 'Bicep: Contracted (Pulling!) • Tricep: Relaxed'
-                : 'Bicep: Relaxed • Tricep: Resting';
+                ? 'Bicep: Contracted • Tricep: Relaxed'
+                : 'Bicep: Relaxed • Tricep: Extended';
         });
 
         let snackBusy = false;
@@ -2802,15 +2740,15 @@
             snackBusy = true;
             const lbl = document.getElementById('snack-label');
             const bar = document.getElementById('snack-bar');
-            lbl.textContent = 'Sugar High! → Insulin released...';
+            lbl.textContent = 'Glucose Elevated → Insulin Secreted...';
             bar.style.transform = 'scaleX(0.92)';
             setTimeout(() => {
-                lbl.textContent = 'Cells absorbing energy...';
+                lbl.textContent = 'Cellular Glucose Uptake in Progress...';
                 bar.style.transform = 'scaleX(0.65)';
                 playTone(480, 'sine', 0.07, 0.03);
             }, 800);
             setTimeout(() => {
-                lbl.textContent = 'Blood Sugar: Back to Normal ✓';
+                lbl.textContent = 'Blood Glucose: 90 mg/dL (Homeostasis ✓)';
                 bar.style.transform = 'scaleX(0.5)';
                 playTone(640, 'triangle', 0.1, 0.04);
                 snackBusy = false;
@@ -2825,8 +2763,8 @@
             wire.style.transform = `scaleY(${brainLvl * 1.1})`;
             wire.style.opacity = String(0.35 + brainLvl * 0.13);
             document.getElementById('brain-label').textContent = brainLvl === 5
-                ? 'Connection: Mastered! (Level 5 ★)'
-                : `Connection: Getting Stronger (Level ${brainLvl})`;
+                ? 'Synaptic Strength: Long-Term Potentiation (Level 5 ★)'
+                : `Synaptic Strength: Reinforced (Level ${brainLvl})`;
         });
 
         /* #3: Zero-Lag SVG Prism Light Splitter */
@@ -2837,7 +2775,7 @@
 
         prismSlider.addEventListener('input', () => {
             const angle = Number(prismSlider.value);
-            prismReadout.textContent = `Incident Beam Angle: ${angle}°`;
+            prismReadout.textContent = `Angle of Incidence: ${angle}°`;
             const inY = 78 - ((angle - 20) / 55) * 42;
             prismInRay.setAttribute('y1', inY.toFixed(1));
 
