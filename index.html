@@ -16,21 +16,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         /* ==========================================================================
-           GPU-ACCELERATED CSS @PROPERTY COLOR ENGINE (ZERO LAG, SMOOTH MORPHING)
+           ULTRA-FAST GPU COMPOSITED THEME ENGINE (ZERO STYLE RECALCULATION LAG)
            ========================================================================== */
-        @property --bg { syntax: '<color>'; inherits: true; initial-value: #0b1021; }
-        @property --bg-2 { syntax: '<color>'; inherits: true; initial-value: #151f3d; }
-        @property --card { syntax: '<color>'; inherits: true; initial-value: rgba(19, 28, 54, 0.9); }
-        @property --card-solid { syntax: '<color>'; inherits: true; initial-value: #151e38; }
-        @property --border { syntax: '<color>'; inherits: true; initial-value: rgba(124, 198, 254, 0.28); }
-        @property --accent { syntax: '<color>'; inherits: true; initial-value: #7cc6fe; }
-        @property --accent-2 { syntax: '<color>'; inherits: true; initial-value: #ff9ebb; }
-        @property --accent-ink { syntax: '<color>'; inherits: true; initial-value: #071224; }
-
         :root, body[data-scene="0"] {
             --bg: #0b1021;
             --bg-2: #151f3d;
-            --card: rgba(19, 28, 54, 0.9);
+            --card: rgba(19, 28, 54, 0.92);
             --card-solid: #151e38;
             --border: rgba(124, 198, 254, 0.28);
             --accent: #7cc6fe;
@@ -40,7 +31,7 @@
         body[data-scene="1"] {
             --bg: #1c110c;
             --bg-2: #331d14;
-            --card: rgba(43, 26, 19, 0.9);
+            --card: rgba(43, 26, 19, 0.92);
             --card-solid: #2c1b14;
             --border: rgba(255, 184, 108, 0.28);
             --accent: #ffb86c;
@@ -50,7 +41,7 @@
         body[data-scene="2"] {
             --bg: #071c17;
             --bg-2: #0f332a;
-            --card: rgba(14, 41, 34, 0.9);
+            --card: rgba(14, 41, 34, 0.92);
             --card-solid: #102e26;
             --border: rgba(82, 242, 168, 0.28);
             --accent: #52f2a8;
@@ -60,7 +51,7 @@
         body[data-scene="3"] {
             --bg: #0e1629;
             --bg-2: #1b2a4e;
-            --card: rgba(23, 36, 66, 0.9);
+            --card: rgba(23, 36, 66, 0.92);
             --card-solid: #1a2747;
             --border: rgba(148, 185, 255, 0.28);
             --accent: #94b9ff;
@@ -70,7 +61,7 @@
         body[data-scene="4"] {
             --bg: #1f101b;
             --bg-2: #381b31;
-            --card: rgba(46, 23, 40, 0.9);
+            --card: rgba(46, 23, 40, 0.92);
             --card-solid: #32192c;
             --border: rgba(255, 143, 171, 0.28);
             --accent: #ff8fab;
@@ -80,7 +71,7 @@
         body[data-scene="5"] {
             --bg: #191509;
             --bg-2: #332a12;
-            --card: rgba(42, 35, 16, 0.9);
+            --card: rgba(42, 35, 16, 0.92);
             --card-solid: #2b2411;
             --border: rgba(255, 212, 59, 0.3);
             --accent: #ffd43b;
@@ -90,7 +81,7 @@
         body[data-scene="6"] {
             --bg: #140d24;
             --bg-2: #291b47;
-            --card: rgba(34, 23, 58, 0.9);
+            --card: rgba(34, 23, 58, 0.92);
             --card-solid: #23183c;
             --border: rgba(199, 125, 255, 0.3);
             --accent: #c77dff;
@@ -100,19 +91,19 @@
 
         /* #3: Live 24-Hour Circadian Sky Overrides */
         body[data-circadian="dawn"] {
-            --bg: #1f1424; --bg-2: #3d2238; --card: rgba(46, 28, 48, 0.9); --card-solid: #321d36;
+            --bg: #1f1424; --bg-2: #3d2238; --card: rgba(46, 28, 48, 0.92); --card-solid: #321d36;
             --border: rgba(255, 173, 143, 0.3); --accent: #ffad8f; --accent-2: #ffd166; --accent-ink: #291109;
         }
         body[data-circadian="day"] {
-            --bg: #0c2233; --bg-2: #153c59; --card: rgba(18, 48, 71, 0.9); --card-solid: #14354f;
+            --bg: #0c2233; --bg-2: #153c59; --card: rgba(18, 48, 71, 0.92); --card-solid: #14354f;
             --border: rgba(94, 234, 212, 0.3); --accent: #5eead4; --accent-2: #7cc6fe; --accent-ink: #04241e;
         }
         body[data-circadian="sunset"] {
-            --bg: #241118; --bg-2: #471c29; --card: rgba(54, 23, 34, 0.9); --card-solid: #3b1925;
+            --bg: #241118; --bg-2: #471c29; --card: rgba(54, 23, 34, 0.92); --card-solid: #3b1925;
             --border: rgba(255, 143, 163, 0.3); --accent: #ff8fa3; --accent-2: #ffb86c; --accent-ink: #2b0912;
         }
         body[data-circadian="night"] {
-            --bg: #070b17; --bg-2: #111a36; --card: rgba(15, 23, 46, 0.9); --card-solid: #111933;
+            --bg: #070b17; --bg-2: #111a36; --card: rgba(15, 23, 46, 0.92); --card-solid: #111933;
             --border: rgba(124, 198, 254, 0.3); --accent: #7cc6fe; --accent-2: #c77dff; --accent-ink: #061021;
         }
 
@@ -120,7 +111,7 @@
         body.paper-mode {
             --bg: #fbf8f1;
             --bg-2: #f2ece1;
-            --card: rgba(255, 253, 248, 0.94);
+            --card: rgba(255, 253, 248, 0.95);
             --card-solid: #f7f2e7;
             --border: rgba(30, 41, 59, 0.18);
             --accent: #1d4ed8;
@@ -155,30 +146,18 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-padding-top: 96px; }
+        html { scroll-behavior: smooth; scroll-padding-top: 96px; }
         body {
             background-color: var(--bg);
             color: var(--text);
             font: 400 16px/1.75 var(--sans);
             letter-spacing: -0.008em;
             overflow-x: hidden;
-            transition:
-                --bg 0.38s ease,
-                --bg-2 0.38s ease,
-                --card 0.38s ease,
-                --card-solid 0.38s ease,
-                --border 0.38s ease,
-                --accent 0.38s ease,
-                --accent-2 0.38s ease,
-                background-color 0.38s ease;
+            transition: background-color 0.55s cubic-bezier(0.22, 1, 0.36, 1);
             -webkit-font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
         }
-        /* Pause heavy variable interpolations while fast-jumping via top navbar to eliminate scroll lag */
-        body.nav-scrolling,
-        body.nav-scrolling * {
-            transition: none !important;
-        }
+        /* Hardware-accelerated radial glow layer */
         body::before {
             content: "";
             position: fixed;
@@ -186,6 +165,7 @@
             background: radial-gradient(circle at 50% 0%, var(--bg-2) 0%, transparent 65%);
             pointer-events: none;
             z-index: 0;
+            will-change: opacity;
         }
         body.locked { overflow: hidden; }
 
@@ -306,6 +286,7 @@
             transform: scaleX(0);
             transform-origin: left;
             z-index: 100;
+            will-change: transform;
         }
         .navbar {
             position: sticky;
@@ -325,6 +306,7 @@
             border: 1px solid var(--border);
             border-radius: 999px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+            transition: background-color 0.45s ease, border-color 0.45s ease;
         }
         .brand {
             display: flex;
@@ -343,6 +325,7 @@
             display: grid;
             place-items: center;
             font: 700 12px var(--mono);
+            transition: background-color 0.45s ease, color 0.45s ease;
         }
         .nav-links {
             display: flex;
@@ -356,7 +339,7 @@
             font-size: 13px;
             font-weight: 600;
             color: var(--muted);
-            transition: color 0.2s, background-color 0.2s;
+            transition: color 0.25s ease, background-color 0.25s ease;
         }
         .nav-link:hover { color: var(--text); background: rgba(255,255,255,0.06); }
         .nav-link.active {
@@ -380,6 +363,7 @@
             font: 700 11px var(--mono);
             color: var(--accent);
             white-space: nowrap;
+            transition: color 0.45s ease, border-color 0.45s ease;
         }
         .sound-btn {
             display: inline-flex;
@@ -393,7 +377,7 @@
             font: 700 11px var(--mono);
             cursor: pointer;
             white-space: nowrap;
-            transition: transform 0.25s var(--spring);
+            transition: transform 0.25s var(--spring), border-color 0.25s ease;
         }
         .sound-btn:hover {
             border-color: var(--accent);
@@ -442,6 +426,7 @@
             stroke: var(--accent);
             stroke-width: 1.5;
             stroke-dasharray: 6 6;
+            transition: stroke 0.45s ease;
         }
 
         .sec-head { margin-bottom: 28px; }
@@ -452,6 +437,7 @@
             text-transform: uppercase;
             color: var(--accent);
             margin-bottom: 8px;
+            transition: color 0.45s ease;
         }
         .sec-title {
             font: 400 clamp(38px, 5vw, 56px)/1.08 var(--display);
@@ -460,6 +446,7 @@
         .sec-title em {
             color: var(--accent-2);
             font-style: italic;
+            transition: color 0.45s ease;
         }
         .sec-sub {
             color: var(--body);
@@ -489,14 +476,11 @@
             box-shadow:
                 0 14px 34px rgba(0, 0, 0, 0.26),
                 inset 0 1px 0 rgba(255, 255, 255, 0.18);
-            transition: transform 0.28s var(--spring), border-color 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.25s var(--spring), background-color 0.45s ease, border-color 0.45s ease;
         }
         .card:hover {
             transform: translateY(-4px);
             border-color: var(--accent);
-            box-shadow:
-                0 18px 40px rgba(0, 0, 0, 0.32),
-                inset 0 1px 0 rgba(255, 255, 255, 0.28);
         }
         .card.taped::before {
             content: "";
@@ -621,7 +605,7 @@
             display: block;
         }
         body.loupe-active .card {
-            transition: transform 0.18s ease-out, border-color 0.25s ease, box-shadow 0.25s ease;
+            transition: transform 0.18s ease-out, border-color 0.25s ease;
         }
         body.loupe-active .card.loupe-target {
             transform: scale(1.07);
@@ -666,6 +650,7 @@
             padding: 4px 11px;
             border-radius: 999px;
             margin-bottom: 14px;
+            transition: color 0.45s ease, border-color 0.45s ease;
         }
         .card-title {
             font: 700 20px/1.3 var(--sans);
@@ -691,6 +676,7 @@
             font: 600 13px var(--sans);
             color: var(--accent);
             margin-bottom: 18px;
+            transition: color 0.45s ease, border-color 0.45s ease;
         }
         .hero-name {
             font: 400 clamp(50px, 7vw, 84px)/1.02 var(--display);
@@ -700,6 +686,7 @@
         .hero-name span {
             color: var(--accent);
             font-style: italic;
+            transition: color 0.45s ease;
         }
         .type-box {
             display: inline-flex;
@@ -711,6 +698,7 @@
             padding: 6px 12px;
             border-radius: 10px;
             background: rgba(0,0,0,0.28);
+            transition: color 0.45s ease;
         }
         .motto-box {
             border-left: 3px solid var(--accent);
@@ -718,6 +706,7 @@
             margin: 16px 0 18px;
             font: italic 22px/1.35 var(--display);
             color: var(--text);
+            transition: border-color 0.45s ease;
         }
         .motto-box small {
             display: block;
@@ -755,7 +744,7 @@
             background: var(--card-solid);
             color: var(--text);
             cursor: pointer;
-            transition: transform 0.28s var(--spring), border-color 0.25s ease, background-color 0.25s ease;
+            transition: transform 0.25s var(--spring), border-color 0.35s ease, background-color 0.35s ease;
         }
         .btn:hover { transform: translateY(-3px) scale(1.02); border-color: var(--accent); }
         .btn:active { transform: scale(0.94); }
@@ -842,7 +831,7 @@
             color: var(--accent-ink);
             font: 700 11px var(--mono);
             cursor: pointer;
-            transition: transform 0.25s var(--spring);
+            transition: transform 0.25s var(--spring), background-color 0.35s ease;
         }
         .mini-btn:hover { transform: scale(1.07); }
         .mini-btn:active { transform: scale(0.9); }
@@ -1219,6 +1208,7 @@
             border: 1px solid var(--border);
             border-radius: 999px;
             box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+            transition: background-color 0.45s ease, border-color 0.45s ease;
         }
         .dock-label {
             font: 700 9.5px var(--mono);
@@ -2150,7 +2140,10 @@
             playUnlockChord();
             portalOverlay.classList.add('unlocked');
             document.body.classList.remove('locked');
-            setTimeout(() => { portalOverlay.style.display = 'none'; }, 700);
+            setTimeout(() => {
+                portalOverlay.style.display = 'none';
+                cacheSectionOffsets();
+            }, 700);
         }
 
         portalSlider.addEventListener('pointerdown', () => {
@@ -2174,14 +2167,12 @@
         let width = window.innerWidth;
         let height = window.innerHeight;
         let currentScene = 0;
-        let isFastNavScrolling = false;
 
         function resizeCanvas() {
             width = canvas.width = window.innerWidth;
             height = canvas.height = window.innerHeight;
         }
         resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
 
         const sceneConfigs = [
             { name: '✨ Starry Night', color: '124, 198, 254', vy: -0.08, connect: false, hex: '#0b1021' },
@@ -2193,7 +2184,7 @@
             { name: '🌌 Aurora Glow', color: '199, 125, 255', vy: -0.12, connect: true, hex: '#140d24' }
         ];
 
-        const particles = Array.from({ length: 34 }, () => ({
+        const particles = Array.from({ length: 30 }, () => ({
             x: Math.random() * width,
             y: Math.random() * height,
             r: Math.random() * 2 + 1,
@@ -2205,28 +2196,26 @@
         let lastTrailTime = 0;
 
         function spawnSpark(x, y, burst = false) {
-            if (isFastNavScrolling) return;
-            const count = burst ? 10 : 1;
+            const count = burst ? 9 : 1;
             const cfg = sceneConfigs[currentScene] || sceneConfigs[0];
             for (let i = 0; i < count; i++) {
-                if (sparks.length > 75) sparks.shift();
+                if (sparks.length > 60) sparks.shift();
                 const angle = Math.random() * Math.PI * 2;
-                const speed = burst ? (Math.random() * 3.0 + 1.1) : (Math.random() * 0.8 + 0.2);
+                const speed = burst ? (Math.random() * 2.8 + 1.0) : (Math.random() * 0.8 + 0.2);
                 sparks.push({
                     x,
                     y,
                     vx: Math.cos(angle) * speed,
                     vy: Math.sin(angle) * speed - (burst ? 0.4 : 0.2),
-                    r: burst ? (Math.random() * 2.2 + 1.2) : (Math.random() * 1.6 + 1),
+                    r: burst ? (Math.random() * 2.1 + 1.1) : (Math.random() * 1.5 + 1),
                     life: 1,
-                    decay: burst ? 0.032 : 0.05,
+                    decay: burst ? 0.035 : 0.055,
                     color: cfg.color
                 });
             }
         }
 
         window.addEventListener('pointermove', e => {
-            if (isFastNavScrolling) return;
             if (document.body.classList.contains('uv-active')) {
                 updateUvSpotlight(e.clientX, e.clientY);
             }
@@ -2238,7 +2227,7 @@
                 if (word) markWord(word, false);
             }
             const now = performance.now();
-            if (now - lastTrailTime > 32) {
+            if (now - lastTrailTime > 36) {
                 spawnSpark(e.clientX, e.clientY, false);
                 lastTrailTime = now;
             }
@@ -2258,7 +2247,7 @@
         });
 
         function drawAmbientSky() {
-            if (!document.hidden && !isFastNavScrolling) {
+            if (!document.hidden) {
                 ctx.clearRect(0, 0, width, height);
                 const cfg = sceneConfigs[currentScene] || sceneConfigs[0];
 
@@ -2315,75 +2304,75 @@
         requestAnimationFrame(drawAmbientSky);
 
         /* ==========================================================================
-           3. ZERO-LAG NAVBAR SCROLL ENGINE & VIEWPORT TRACKER
+           3. CACHED-OFFSET SCROLL ENGINE (ZERO DOM REFLOWS WHILE SCROLLING)
            ========================================================================== */
         const sections = [...document.querySelectorAll('.section-block')];
         const navLinks = [...document.querySelectorAll('.nav-link')];
         const scenePill = document.getElementById('scene-pill');
         const scrollBar = document.getElementById('scroll-bar');
         const themeMeta = document.querySelector('meta[name="theme-color"]');
-        let scrollSettleTimer = null;
+        let sectionTops = [];
+        let docMaxScroll = 1;
+        let navLockUntil = 0;
+
+        function cacheSectionOffsets() {
+            const sy = window.scrollY;
+            sectionTops = sections.map(sec => sec.getBoundingClientRect().top + sy);
+            docMaxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        }
+        cacheSectionOffsets();
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            cacheSectionOffsets();
+        }, { passive: true });
+        window.addEventListener('load', cacheSectionOffsets);
+        document.querySelectorAll('details').forEach(d => d.addEventListener('toggle', cacheSectionOffsets));
 
         function applyScene(idx) {
-            if (idx < 0 || idx >= sceneConfigs.length) return;
+            if (idx < 0 || idx >= sceneConfigs.length || idx === currentScene) return;
             currentScene = idx;
-            document.body.setAttribute('data-scene', String(idx));
+            document.body.dataset.scene = String(idx);
             scenePill.textContent = sceneConfigs[idx].name;
-            if (themeMeta) themeMeta.content = sceneConfigs[idx].hex;
-            navLinks.forEach((link, i) => link.classList.toggle('active', i === idx));
+            if (themeMeta && !document.body.classList.contains('paper-mode')) {
+                themeMeta.content = sceneConfigs[idx].hex;
+            }
+            for (let i = 0; i < navLinks.length; i++) {
+                navLinks[i].classList.toggle('active', i === idx);
+            }
         }
 
-        function updateActiveSectionOnScroll() {
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const pct = docHeight > 0 ? Math.min(1, Math.max(0, window.scrollY / docHeight)) : 0;
-            scrollBar.style.transform = `scaleX(${Math.max(0.08, pct)})`;
+        function onScrollTick() {
+            const sy = window.scrollY;
+            const pct = Math.min(1, Math.max(0.06, sy / docMaxScroll));
+            scrollBar.style.transform = `scaleX(${pct.toFixed(3)})`;
 
-            if (isFastNavScrolling) return;
+            if (performance.now() < navLockUntil) return;
 
-            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 25) {
-                if (currentScene !== sections.length - 1) applyScene(sections.length - 1);
+            if (sy >= docMaxScroll - 30) {
+                applyScene(sections.length - 1);
                 return;
             }
 
-            const targetY = window.innerHeight * 0.36;
-            let bestIdx = 0;
-            let bestDist = Infinity;
-
-            for (let i = 0; i < sections.length; i++) {
-                const rect = sections[i].getBoundingClientRect();
-                if (rect.top <= targetY && rect.bottom >= targetY) {
-                    bestIdx = i;
-                    bestDist = 0;
+            const probeY = sy + window.innerHeight * 0.38;
+            let activeIdx = 0;
+            for (let i = sectionTops.length - 1; i >= 0; i--) {
+                if (probeY >= sectionTops[i]) {
+                    activeIdx = i;
                     break;
                 }
-                const dist = Math.min(Math.abs(rect.top - targetY), Math.abs(rect.bottom - targetY));
-                if (dist < bestDist) {
-                    bestDist = dist;
-                    bestIdx = i;
-                }
             }
-            if (bestIdx !== currentScene) {
-                applyScene(bestIdx);
-            }
+            applyScene(activeIdx);
         }
 
-        let scrollTicking = false;
+        let scrollScheduled = false;
         window.addEventListener('scroll', () => {
-            if (!scrollTicking) {
+            if (!scrollScheduled) {
+                scrollScheduled = true;
                 requestAnimationFrame(() => {
-                    updateActiveSectionOnScroll();
-                    scrollTicking = false;
+                    onScrollTick();
+                    scrollScheduled = false;
                 });
-                scrollTicking = true;
             }
-            clearTimeout(scrollSettleTimer);
-            scrollSettleTimer = setTimeout(() => {
-                if (isFastNavScrolling) {
-                    isFastNavScrolling = false;
-                    document.body.classList.remove('nav-scrolling');
-                }
-                updateActiveSectionOnScroll();
-            }, 140);
         }, { passive: true });
 
         const menuBtn = document.getElementById('menu-btn');
@@ -2393,23 +2382,13 @@
             menuBtn.textContent = open ? 'Close −' : 'Menu +';
         });
 
-        /* Smooth, Lag-Free Navbar Section Jump */
+        /* Instant, Zero-Lag Navbar Click Jump */
         navLinks.forEach((link, idx) => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
+            link.addEventListener('click', () => {
                 navBoxLinks.classList.remove('open');
                 menuBtn.textContent = 'Menu +';
-
-                isFastNavScrolling = true;
-                document.body.classList.add('nav-scrolling');
+                navLockUntil = performance.now() + 650;
                 applyScene(idx);
-
-                const targetSection = sections[idx];
-                if (targetSection) {
-                    const topOffset = targetSection.getBoundingClientRect().top + window.scrollY - 84;
-                    window.scrollTo({ top: topOffset, behavior: 'smooth' });
-                    history.replaceState(null, '', '#' + targetSection.id);
-                }
             });
         });
 
@@ -2578,6 +2557,7 @@
                 qNextBtn.textContent = 'Play Again ↻';
                 playUnlockChord();
             }
+            cacheSectionOffsets();
         });
         renderQuizQuestion();
 
